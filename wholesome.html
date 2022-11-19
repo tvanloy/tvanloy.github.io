@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wholesome memes</title>
+    <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav>
+    <a href="index.html">home</a>
+</nav>
+    <div x-data="{
+        responsedata: null,
+        async getData() {
+            this.responsedata = await (await fetch('https://api-service-tvanloy.cloud.okteto.net/wholesome-memes'));
+        }
+    }">
+        <button x-on:click="getData" x-init="getData">New meme</button>
+    </div>
+</body>
+</html>
