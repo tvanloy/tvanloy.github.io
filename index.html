@@ -7,36 +7,9 @@
 </head>
 <body>
 <h1>The meme API</h1>
-    <div class="sidenav">
-        <ul>
-            <li><a href="wholesome.html">Wholesome meme</a></li>
-            <li><a href="programmer.html">Programmer humor</a></li>
-        </ul>
-    </div>
-        <div class="main">
-        <div x-data="{
-        responsedata: null,
-        firstname: null,
-        lastname: null,
-        product: null,
-        async callmethod1() {
-            this.responsedata = await (await fetch('https://api-service-arnevangheel.cloud.okteto.net/order',
-            {
-                method: 'POST',
-                body: JSON.stringify({
-                    first_name: this.firstname,
-                    last_name: this.lastname,
-                    product: this.product,
-                }),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })).json();
-        },
-    }">
-            <button x-on:click="callmethod1">upload image</button>
-        </div>
-    </div>
-
+<ul>
+    <li><a href="wholesome.html">Wholesome meme</a></li>
+    <li><a href="programmer.html">Programmer humor</a></li>
+</ul>
 </body>
 </html>
