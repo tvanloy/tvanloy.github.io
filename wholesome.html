@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:x-on="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>wholesome memes</title>
-    <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
+    <title>test</title>
 </head>
 <body>
-<nav>
-    <a href="index.html">home</a>
-</nav>
+    <nav>
+        <a href="index.html">home</a>
+    </nav>
     <div x-data="{
                  img:'',
 
@@ -17,8 +17,8 @@
                     this.img= 'https://api-service-tvanloy.cloud.okteto.net/wholesome-memes'
                  }
     }">
-        <button x-on:click="getImage">Refresh Orders</button>
-        <img x-bind:src="img">
+    <img  x-init="getImage" x-bind:src="img" width="1000px" height="1000px">
     </div>
+
 </body>
 </html>
