@@ -13,7 +13,7 @@
     <div x-data="{
         async getData() {
             this.responsedata = await (await fetch('https://api-service-tvanloy.cloud.okteto.net/wholesome-memes'));
-        }
+        }console.log(responsedata)
     }">
         <button x-on:click="getData" x-init="getData">New meme</button>
     </div>
